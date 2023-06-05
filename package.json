@@ -1,0 +1,11 @@
+{
+  "name": "translation-parsing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "Script for parsing google sheet and put generated files to the project",
+  "author": "Ramil Rakhmatullin",
+  "license": "ISC",
+  "dependencies": {
+    "googleapis": "^103.0.0"
+  }
+}
