@@ -3,11 +3,12 @@ const parseSheet = async ({
   auth,
   spreadsheetId,
 }) => {
-
   const sheetsData = await googleSheetsInstance.spreadsheets.get({
     auth,
     spreadsheetId: spreadsheetId,
   });
+
+  console.log('Successfully fetched spreadsheet data');
 
   const result = {};
 
@@ -19,6 +20,8 @@ const parseSheet = async ({
     });
 
     const sheetName = sheet.properties.title;
+
+    console.log(`Parsing sheet ${sheetName}...`);
 
     const rows = sheetData.data.values;
     if (rows.length > 0) {
@@ -38,7 +41,11 @@ const parseSheet = async ({
         }
       });
     }
+
+    console.log(`Parsing sheet ${sheet.properties.title} is done!`);
   }
+
+  console.log(`All data have parsed: ${JSON.stringify(result, null, 2)}`);
 
   return result;
 };

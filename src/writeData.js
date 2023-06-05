@@ -16,7 +16,8 @@ const writeData = (data, {
   outputFileName,
   outputFileExtension,
 }) => {
-  console.log(`Writing data to ${outputPath}, ${data}`);
+  console.log(`Writing data to ${outputPath}`);
+  
   for (let [lngCode, phrases] of Object.entries(data)) {
     fs.writeFileSync(
       `${outputPath}/${outputFileName(lngCode)}.${outputFileExtension}`,

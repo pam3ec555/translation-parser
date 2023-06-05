@@ -35,6 +35,9 @@ const translate = async ({
     outputFileName,
     outputFileExtension,
   });
+
+  console.log('Done!');
+  exit(0);
 }
 
 module.exports = translate;
