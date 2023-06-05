@@ -37,7 +37,6 @@ const translate = async ({
   });
 
   console.log('Done!');
-  exit(0);
 }
 
 module.exports = translate;
